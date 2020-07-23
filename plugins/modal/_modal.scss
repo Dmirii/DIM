@@ -1,0 +1,122 @@
+
+// Базовые цвета
+$border-color : #eee;
+$button-color : white;
+$button-hover-color: #007bff;
+$button-active-color: grey;
+
+
+// стили для анимации
+.open {
+    .DIMmodal__window,
+    .DIMmodal__overlay{
+        opacity: 1 !important;
+        z-index: 1000 !important;  
+    }
+    .DIMmodal__window{
+        transform: translateY(100px);
+    }
+    .DIMmodal__overlay{
+        background: rgba(0,0,0, .5);
+    }
+}
+
+.hide{// временный класс для анимации закрытия модалки
+    .DIMmodal__window,
+    .DIMmodal__overlay{
+        opacity: 1 !important;
+        z-index: 1000 !important;  
+    }
+    .DIMmodal__window{
+        transform: translateY(-200px);
+    }
+    .DIMmodal__overlay{
+        background: rgba(0,0,0, 0);
+    }
+}
+// модалка и подложка не видны по умолчанию
+.DIMmodal__window,
+.DIMmodal__overlay
+{
+    opacity: 0;
+    z-index: -1;
+}
+
+.DIMmodal{   
+    // mist
+    &__overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0, 0);
+        transition: background .2s ease-in;
+    }
+    
+    &__window{// main modal window
+        width: 600px;       
+        border-radius: 5px;
+        background: #fff;
+        margin: 0 auto;
+        transform: translateY(-200px);
+        transition: transform .2s ease-in;
+        
+        &-header{// modal header
+            padding: 5px 10px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $border-color;
+        }
+        &-title{
+            font-size: 1.5rem;  
+        }
+        &-close{
+            cursor: pointer;
+            font-size: 18px;
+            width: 18px;
+            text-align: center;
+            &:hover{
+                border: 1px solid $border-color;
+                color: $button-hover-color;
+            }
+        }
+
+        &-body{ // modal body
+            font-size: 14px;           
+            padding: 5px 10px;            
+        }
+
+        &-footer{// modal footer
+            display: flex;
+            justify-content: flex-end;
+            padding: 5px 10px;          
+            border-top: 1px solid $border-color;
+            //
+            // BUTTONS ////////////////////////
+            //
+            button{
+                border: 1px solid $border-color;
+                border-radius: 4px;
+                height: 25px;
+                width: 60px;
+                margin: 0px 5px;
+                background: $button-color;
+                &:hover{
+                    background-color: $button-hover-color;
+                    color:white;
+                }
+                &:active{
+                    background-color: $button-active-color;
+                    color:black;
+                }
+            }
+         
+        }
+
+
+    }
+
+
+
+}

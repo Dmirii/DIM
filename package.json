@@ -1,0 +1,19 @@
+{
+  "name": "dim",
+  "version": "1.0.0",
+  "description": "JS UI Components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmirii/DIM.git"
+  },
+  "author": "Dima A",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmirii/DIM/issues"
+  },
+  "homepage": "https://github.com/Dmirii/DIM#readme"
+}

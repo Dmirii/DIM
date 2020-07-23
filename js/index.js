@@ -1,4 +1,5 @@
 'use strict'
+//import {DIM} from '../js/base.js';
 
 const modalOpen = document.querySelector('.modal-open');
 const addContent = document.querySelector('.add-content');

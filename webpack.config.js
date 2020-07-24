@@ -34,7 +34,7 @@ module.exports = {
   entry: ['@babel/polyfill', './index.js'],
   output: {
     filename: filename('js'),
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
   },
   resolve: {
     extensions: ['.js'],
@@ -60,7 +60,7 @@ module.exports = {
     new CopyPlugin([
       {
         from: path.resolve(__dirname, 'src/favicon.ico'),
-        to: path.resolve(__dirname, 'dist'),
+        to: path.resolve(__dirname, 'docs'),
       },
     ]),
     new MiniCssExtractPlugin({

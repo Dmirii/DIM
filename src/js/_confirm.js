@@ -7,6 +7,9 @@ export function dimConfirm(options) {
       title: options.title,
       width: '400px',
       content: options.content,
+      onClose() {
+        modal.destroy();
+      },
       closable: false,
       footerButtons: [
         {
@@ -18,7 +21,7 @@ export function dimConfirm(options) {
           },
         },
         {
-          text: 'Удалить',
+          text: 'Принять',
           type: 'danger', handler() {
             console.log('Danger clicked');
             modal.close();
@@ -28,6 +31,6 @@ export function dimConfirm(options) {
       ],
 
     });
-    modal.open();
+    setTimeout( () => modal.open(), 1000);
   });
 }

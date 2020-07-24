@@ -4,6 +4,7 @@
 
 *{
     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
 }
 input{
     border: 1px solid $border-color;
@@ -11,9 +12,7 @@ input{
     height: 25px;
     width: 180px;
     margin: 5px 5px;
-    background: $button-color;
-
-    
+    background: $button-color;   
     
 }
 h1{
@@ -22,24 +21,38 @@ h1{
     font-weight: 700;
     margin: 10px 0 10px 0;
 }
+h2{
+    font-size: 20px;
+    text-decoration: underline;
+    color:#007bff;
+
+}
+hr{
+    margin: 5px 0 5px 0;
+    border: none; /* Убираем границу */
+    background-color: #007bff; /* Цвет линии */
+    color:#007bff; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+}
 .container{
-    max-width: 1000px;
+    max-width: 650px;
     margin: 10px auto;
+    button{
+        padding: 0 5px 0 5px;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        height: 25px;
+        min-width: 180px;
+        margin: 5px 5px;
+        background: $button-color;
+        &:hover{
+            background-color: $button-hover-color;
+            color:white;
+        }
+        &:active{
+            background-color: $button-active-color;
+            color:black;
+        }
+    }
 }
 
-button{
-    border: 1px solid $border-color;
-    border-radius: 4px;
-    height: 25px;
-    width: 180px;
-    margin: 5px 5px;
-    background: $button-color;
-    &:hover{
-        background-color: $button-hover-color;
-        color:white;
-    }
-    &:active{
-        background-color: $button-active-color;
-        color:black;
-    }
-}
